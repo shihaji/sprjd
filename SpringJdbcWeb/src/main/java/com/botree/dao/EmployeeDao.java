@@ -21,6 +21,8 @@ public class EmployeeDao {
 	
 	public boolean login(String name,String password) {
 		
+		System.out.println("helo world");
+		
 		String sql="select password from user where name=:name";
 		
 		String s=jdbcTemplate.queryForObject(sql, new MapSqlParameterSource("name",name) ,String.class);
